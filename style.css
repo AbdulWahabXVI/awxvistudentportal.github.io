@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*,
+::after,
+::before {
+    box-sizing: border-box;
+    font-family: "Product Sans";
+}
+
+body {
+    font-family: 'Product Sans';
+    font-size: 0.875rem;
+    opacity: 1;
+    overflow-y: scroll;
+    margin: 0;
+    background: url("images/bg4.jpeg");
+    backdrop-filter: blur(20px);
+    background-size: contain;
+    background-attachment: fixed;
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+    font-family: 'Product Sans', sans-serif;
+}
+
+li {
+    list-style: none;
+}
+
+h4 {
+    font-family: 'Product Sans', sans-serif;
+    font-size: 1.275rem;
+    color: var(--bs-emphasis-color);
+}
+
+/* Layout for admin dashboard skeleton */
+
+#specificTable{
+    overflow-x: scroll;
+    overflow-y: scroll;
+}
+
+.card, .card-border{
+    border-radius: 25px;
+}
+
+.row{
+    filter: drop-shadow(5px 5px 5px 5px black);
+}
+
+.wrapper {
+    align-items: stretch;
+    display: flex;
+}
+
+#sidebar {
+    max-width: 264px;
+    min-width: 264px;
+    transition: all 0.35s ease-in-out;
+    background-color: rgba(50, 50, 50, 0.95);
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    min-width: 0;
+    overflow: hidden;
+    transition: all 0.35s ease-in-out;
+    width: 100%;
+}
+
+/* Sidebar Elements Style */
+
+.sidebar-logo {
+    padding: 1.15rem;
+}
+
+.sidebar-logo a {
+    color: #e9ecef;
+    font-size: 1.15rem;
+    font-weight: 600;
+}
+
+.sidebar-nav {
+    list-style: none;
+    margin-bottom: 0;
+    padding-left: 0;
+    margin-left: 0;
+}
+
+.sidebar-header {
+    color: #e9ecef;
+    font-size: .75rem;
+    padding: 1.5rem 1.5rem .375rem;
+}
+
+a.sidebar-link {
+    padding: .625rem 1.625rem;
+    color: #e9ecef;
+    position: relative;
+    display: block;
+    font-size: 0.875rem;
+}
+
+.sidebar-link[data-bs-toggle="collapse"]::after {
+    border: solid;
+    border-width: 0 .075rem .075rem 0;
+    content: "";
+    display: inline-block;
+    padding: 2px;
+    position: absolute;
+    right: 1.5rem;
+    top: 1.4rem;
+    transform: rotate(-135deg);
+    transition: all .2s ease-out;
+}
+
+.sidebar-link[data-bs-toggle="collapse"].collapsed::after {
+    transform: rotate(45deg);
+    transition: all .2s ease-out;
+}
+
+.avatar {
+    height: 60px;
+    width: 60px;
+    border-radius: 50px;
+}
+
+.navbar-expand .navbar-nav {
+    margin-left: auto;
+}
+
+.content {
+    flex: 1;
+    max-width: 100vw;
+    width: 100vw;
+}
+
+@media (min-width:768px) {
+    .content {
+        max-width: auto;
+        width: auto;
+    }
+}
+
+.card {
+    box-shadow: 0 0 .875rem 0 rgba(34, 46, 60, .05);
+    margin-bottom: 24px;
+}
+
+.illustration {
+    background-color: var(--bs-primary-bg-subtle);
+    color: var(--bs-emphasis-color);
+}
+
+.illustration-img {
+    max-width: 150px;
+    width: 100%;
+}
+
+/* Sidebar Toggle */
+
+#sidebar.collapsed {
+    margin-left: -264px;
+}
+
+/* Footer and Nav */
+
+@media (max-width:767.98px) {
+
+    .js-sidebar {
+        margin-left: -264px;
+    }
+
+    #sidebar.collapsed {
+        margin-left: 0;
+    }
+
+    .navbar,
+    footer {
+        width: 100vw;
+    }
+}
+
+/* Theme Toggler */
+
+.theme-toggle {
+    position: relative;
+    float: left;
+    z-index: 10;
+    border: none;
+    background-color: var(--bs-body-color);
+    height: 60px;
+    width: 60px;
+    border-radius: 50px;
+    margin-right: 10px;
+}
+
+.theme-toggle #sun,
+html[data-bs-theme="dark"] .theme-toggle #sun,
+html[data-bs-theme="light"] .theme-toggle #moon {
+    cursor: pointer;
+    padding: 10px;
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+.theme-toggle #moon,
+html[data-bs-theme="dark"] .theme-toggle #moon {
+    display: none;
+}
+
+html[data-bs-theme="light"] .theme-toggle #sun {
+    display: none;
+}
+
+@media screen and (min-width: 600px){
+    .form-control{
+        background: white;
+        outline: none;
+        border: none;
+    }
+    body{
+        font-family: "Bahnschrift";
+        background-size: cover;
+    }
+    #login{
+        background-color: rgba(240, 220, 200, 0.99);
+        width: 50%;
+        padding: 5%;
+        margin: auto;
+        border-radius: 25px;
+    }
+    #content{
+        background-color: rgba(240, 220, 200, 0.99);
+        width: 90%;
+        height: 90%;
+        padding: 5%;
+        margin: auto;
+        border-radius: 25px;
+    }
+    #register{
+        background-color: rgba(240, 220, 200, 0.99);
+        width: 50%;
+        padding: 5%;
+        margin: auto;
+        border-radius: 25px;
+    }
+}
+@media screen and (max-width: 600px){
+    body{
+        font-size: 30px;
+    }
+    .form-control{
+        height: 70px;
+        font-size: 30px;
+    }
+    #login{
+        width: 90%;
+    }
+    #register{
+        width: 90%;
+    }
+    #content{
+        width: 90%;
+        height: 90%;
+    }
+    .btn{
+        height: 70px;
+        width: 150px;
+        border-radius: 25px;
+        font-size: 30px;
+    }
+}
